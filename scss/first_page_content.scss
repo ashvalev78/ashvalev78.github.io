@@ -1,0 +1,107 @@
+.content__main {
+  background: url(../Images/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.header {
+  width:100%;
+  display: flex;
+  margin-top: px_to_rem(5px);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: px_to_rem(60px);
+
+  .header__menu {
+    display: flex;
+    width: px_to_rem(620px);
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-self: flex-start;
+}
+
+.menu__buttons {
+  display: inline-flex;
+  width: px_to_rem(620px);
+  justify-content: space-around;
+  align-items: baseline;
+
+  .menu__button {
+    text-transform: uppercase;
+    font-size: px_to_rem(13px);
+    align-items: baseline;
+
+    &:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: px_to_rem(15px);
+    width: px_to_rem(5px);
+    height: px_to_rem(5px);
+    border-radius: px_to_rem(2.5px);
+    background-color: #fff;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  font-size: px_to_rem(13px);
+  text-transform: uppercase;
+  width: px_to_rem(97px);
+  height: px_to_rem(35px);
+  border-radius: px_to_rem(6px) px_to_rem(6px) px_to_rem(6px) px_to_rem(6px);
+  background: #e45028;
+  justify-content: center;
+  align-items: center;
+  margin-left: px_to_rem(13px);
+
+  &:hover {
+    background: #c1401e;
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .content__left {
+    flex: 1;
+  }
+
+  .content__right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .text-up {
+      display: flex;
+      font-family: $first-font;
+      font-size: px_to_rem(72px);
+      color: $burger-descr1;
+    }
+    .text-down {
+      display: flex;
+      font-family: $second-font;
+      font-size: px_to_rem(65px);
+    }
+  }
+  margin-bottom: px_to_rem(100px);
+}
+
+.bottom__arrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: px_to_rem(40px);
+}
