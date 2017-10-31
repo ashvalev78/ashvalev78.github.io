@@ -1,0 +1,78 @@
+.team__section {
+  background: url(../images/team-bg.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.team__descr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: px_to_rem(90px);
+  padding-right: px_to_rem(110px);
+  width: 49%;
+  height: 100%;
+  opacity: 0.9;
+  background-color: #2e3133;
+}
+
+.team__accordeon {
+  margin-left: px_to_rem(80px);
+}
+
+.accordeon__item {
+  margin-bottom: px_to_rem(40px);
+}
+
+.team__head {
+  font-family: $first-font;
+  font-size: px_to_rem(72px);
+  color: $burger-descr1;
+  text-transform: uppercase;
+  margin-bottom: px_to_rem(90px);
+}
+
+.item__head {
+  width: auto;
+  margin-bottom: px_to_rem(20px);
+}
+
+.item__name {
+  font-family: $first-font;
+  font-size: px_to_rem(14px);
+}
+
+.item__bottom {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+
+@each $active in (1, 2, 3, 4) {
+  .is__active#{$active}:active {
+    .item__name {
+      color: $burger-descr1;
+    }
+    .item__bottom {
+      height: auto;
+    }
+  }
+}
+
+.team__photo {
+  width: px_to_rem(125px);
+  height: px_to_rem(100px);
+  clip-path: circle(px_to_rem(50px) at center center);
+}
+
+.item__descr {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: px_to_rem(14px);
+  margin-left: px_to_rem(25px);
+  .item__occupation {
+    font-weight: bold;
+    margin-bottom: px_to_rem(20px);
+  }
+}

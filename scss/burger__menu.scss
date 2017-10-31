@@ -1,0 +1,30 @@
+.burger__menu {
+  background: url("../images/burger_menu-bg.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.burger__menu-text {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: px_to_rem(72px);
+  font-family: $first-font;
+  top: px_to_rem(110px);
+  left: px_to_rem(100px);
+}
+
+.menu__types {
+  -webkit-transform: rotate(270deg);
+  align-self: flex-end;
+  height: 100%;
+}
+
+.menu__name {
+  opacity: 0.9;
+  background-color: #2e3133;
+  height:inherit;
+  font-size: px_to_rem(40px);
+  font-family: $first-font;
+}
