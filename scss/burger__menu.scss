@@ -16,9 +16,8 @@
 }
 
 .menu__types {
-  -webkit-transform: rotate(270deg);
-  align-self: flex-end;
-  height: 100%;
+  position: absolute;
+  transform: rotate(270deg);
 }
 
 .menu__name {

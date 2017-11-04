@@ -1,0 +1,30 @@
+.delivery {
+  background: url(../images/delivery-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.delivery-title {
+  color: $burger-descr1;
+  font-size: px_to_rem(72px);
+  font-family: $first-font;
+}
+
+.delivery__form {
+  width: px_to_rem(460px);
+  margin-right: px_to_rem(10px);
+}
+
+.form__elem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: inline-flex;
+}

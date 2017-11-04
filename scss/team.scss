@@ -1,11 +1,11 @@
 .team__section {
   background: url(../images/team-bg.jpg) no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
 }
 
 .team__descr {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,7 @@
   height: 100%;
   opacity: 0.9;
   background-color: #2e3133;
+  left: 51%;
 }
 
 .team__accordeon {
@@ -39,8 +40,20 @@
 }
 
 .item__name {
+  display: flex;
   font-family: $first-font;
   font-size: px_to_rem(14px);
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: px_to_rem(9px) solid transparent;
+    border-top-color: $burger-descr1;
+    border-bottom-width: 0;
+    margin-right: px_to_rem(9px);
+  }
 }
 
 .item__bottom {

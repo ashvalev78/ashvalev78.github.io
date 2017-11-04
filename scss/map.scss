@@ -1,0 +1,44 @@
+.map {
+  background: url("../images/map-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f0f0f;
+  height: px_to_rem(60px);
+  align-self: flex-end;
+  padding: 0 px_to_rem(80px);
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__socials {
+  display: flex;
+  width: px_to_rem(140px);
+}
+
+.socials {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+}
+
+@each $social in (vk, fb, inst, tw) {
+  .social__#{$social} {
+    height: px_to_rem(20px);
+    width: px_to_rem(20px);
+    fill: black;
+
+    &:hover {
+      fill: #ffff;
+    }
+  }
+}
