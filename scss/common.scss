@@ -1,6 +1,17 @@
-@function px_to_rem($px) {
-  $rem: $px/16px;
-  @return #{$rem}rem;
+html {
+  font-size: 16px;
+
+  @include small-cont {
+    font-size: 15px;
+  }
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
 }
 
 * {
@@ -29,6 +40,7 @@ body {
   font-family: $main-font, Arial, Helvetica, sans-serif;
   color: white;
   background-size: 100%;
+  font-size: px_to_rem(14px);
 }
 
 .wrapper {
@@ -46,13 +58,16 @@ body {
   align-items: center;
   margin: 0 auto;
   width: px_to_rem(940px);
+
+  @include small-cont {
+    width: 95%;
+  };
 }
 
 .section {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.31);
-  min-height: px_to_rem(650px);
-  min-width: px_to_rem(940px);
+  //min-height: px_to_rem(650px);
   position: relative;
   display: flex;
   overflow: hidden;
@@ -103,6 +118,13 @@ body {
       opacity: 1;
     }
   }
+}
+
+.dot__list {
+
+  @include small-cont {
+    display: none;
+  };
 }
 
 .dot__item {

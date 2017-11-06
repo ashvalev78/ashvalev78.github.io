@@ -1,5 +1,5 @@
 .team__section {
-  background: url(../images/team-bg.jpg) no-repeat;
+  background: url(../images/team-bg.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -12,6 +12,12 @@
   padding-top: px_to_rem(90px);
   padding-right: px_to_rem(110px);
   width: 49%;
+  @include tablets {
+    padding-right: 0;
+    width: 100%;
+    left: 0;
+    align-items: center;
+  }
   height: 100%;
   opacity: 0.9;
   background-color: #2e3133;
@@ -20,10 +26,22 @@
 
 .team__accordeon {
   margin-left: px_to_rem(80px);
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    margin: 0;
+    align-items: center;
+  };
 }
 
 .accordeon__item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: px_to_rem(40px);
+
+  @include tablets {
+    align-items: center;
+  };
 }
 
 .team__head {
@@ -35,8 +53,12 @@
 }
 
 .item__head {
-  width: auto;
+  width: 100%;
   margin-bottom: px_to_rem(20px);
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  };
 }
 
 .item__name {
@@ -66,6 +88,10 @@
   .is__active#{$active}:active {
     .item__name {
       color: $burger-descr1;
+
+      &:before {
+        transform: rotate(180deg);
+      }
     }
     .item__bottom {
       height: auto;

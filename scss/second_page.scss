@@ -3,6 +3,14 @@
   background-size: cover;
   align-content: center;
   background-position: center center;
+
+  @include tablets {
+    background: url(../images/second-bg-tablet.jpg) no-repeat;
+  };
+
+  @include tablets {
+    background: url(../images/2nd_page_phones-bg.jpg) no-repeat;
+  };
 }
 
 .second__header__best {
@@ -10,21 +18,36 @@
   font-size: px_to_rem(72px);
   margin-top: px_to_rem(90px);
   margin-bottom: px_to_rem(90px);
+  text-align: center;
   color: $best-color;
   font-family: $first-font;
+
+  @include phones {
+    font-size: px_to_rem(55px);
+    margin-bottom: px_to_rem(20px);
+    margin-top: px_to_rem(20px);
+  };
 }
 
 .values__list {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  };
 }
 
 .value__item {
   display: flex;
-  flex-basis: 33%;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   padding: 0 px_to_rem(15px);
   color: $best-color;
+  @include phones {
+    flex-flow: row nowrap;
+    margin-bottom: px_to_rem(20px);
+  };
 }
 
 .value__img {
@@ -33,7 +56,13 @@
   width: px_to_rem(100px);
 }
 
+.value__block {
+  display: flex;
+  flex-direction: column;
+}
+
 .value__value {
+  word-wrap: normal;
   display: flex;
   width: inherit;
   text-align: center;

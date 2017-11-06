@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Flexbox tryings first page</title>
+  <title>ashvalev78_Loftschool_site</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -18,17 +18,20 @@
           <div class="header__logo">
             <a href="" class="logo__link"><img src="images/icons/logo.svg" class="logo"></a>
           </div>
-          <div class="nav">
-            <div class="header__menu">
+          <div class="header__menu">
+            <div class="nav">
               <ul class="menu__buttons">
-                <li class="menu__button"><a href="" class="menu__item">о нас</a></li>
-                <li class="menu__button"><a href="" class="menu__item">бургеры</a></li>
-                <li class="menu__button"><a href="" class="menu__item">команда</a></li>
-                <li class="menu__button"><a href="" class="menu__item">меню</a></li>
-                <li class="menu__button"><a href="" class="menu__item">отзывы</a></li>
-                <li class="menu__button"><a href="" class="menu__item">контакты</a></li>
+                <li class="menu__button"><a href="" class="menu__item-nav">о нас</a></li>
+                <li class="menu__button"><a href="" class="menu__item-nav">бургеры</a></li>
+                <li class="menu__button"><a href="" class="menu__item-nav">команда</a></li>
+                <li class="menu__button"><a href="" class="menu__item-nav">меню</a></li>
+                <li class="menu__button"><a href="" class="menu__item-nav">отзывы</a></li>
+                <li class="menu__button"><a href="" class="menu__item-nav">контакты</a></li>
               </ul>
-              <div class="button"><a href="" class="text">заказать</a></div>
+            </div>
+            <div class="button"><a href="" class="text">заказать</a></div>
+            <div class="mini__menu">
+              <div class="mini__menu-item"></div>
             </div>
           </div>
         </div>
@@ -57,18 +60,24 @@
           <ul class="values__list">
             <li class="value__item">
               <img src="images/icons/meat.svg" alt="" class="value__img">
-              <div class="value__value">100% свежее мясо</div>
-              <div class="value__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+              <div class="value__block">
+                <div class="value__value">100% свежее мясо</div>
+                <div class="value__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+              </div>
             </li>
             <li class="value__item">
               <img src="images/icons/hand.svg" alt="" class="value__img">
-              <div class="value__value">Ручная сборка</div>
-              <div class="value__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+              <div class="value__block">
+                <div class="value__value">Ручная сборка</div>
+                <div class="value__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+              </div>
             </li>
             <li class="value__item">
               <img src="images/icons/natural.svg" alt="" class="value__img">
-              <div class="value__value">Натуральные ингредиенты</div>
-              <div class="value__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+              <div class="value__block">
+                <div class="value__value">Натуральные ингредиенты</div>
+                <div class="value__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -135,24 +144,25 @@
     <section class="section burger__menu">
       <div class="burger__menu-text">меню</div>
       <ul class="accordeon menu__types">
-        <div class="menu__type">
-          <div class="menu__item">
+        <li class="menu__type">
+          <a class="menu__item" href="" style="background-image: url(images/meat-bg.jpg);">
             <div class="menu__name">Для мясоедов</div>
-            <div class="menu__descr"></div>
-          </div>
-        </div>
-        <div class="menu__type">
-          <div class="menu__item">
+          </a>
+          <div class="menu__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        </li>
+        <li class="menu__type">
+          <a class="menu__item" href="" style="background-image: url(images/veg-bg.jpg);">
             <div class="menu__name">Вегетарианское</div>
-            <div class="menu__descr"></div>
-          </div>
-        </div>
-        <div class="menu__type">
-          <div class="menu__item">
+          </a>
+          <div class="menu__descr">...</div>
+        </li>
+        <li class="menu__type">
+          <a class="menu__item" href="" style="background-image: url(images/diet-bg.jpg);">
             <div class="menu__name">Диетическое</div>
-            <div class="menu__descr"></div>
-          </div>
-        </div>
+          </a>
+          <div class="menu__descr">...</div>
+        </li>
       </ul>
     </section>
     <section class="section reviews__page">
@@ -234,59 +244,95 @@
       </div>
     </section>
     <section class="section delivery">
-      <div class="container">
+      <div class="container order__form">
         <div class="delivery-title">Закажите доставку</div>
-        <div class="delivery__form">
-          <form action="" class="form__elem">
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+        <div class="delivery__block">
+          <div class="delivery__form">
+            <form action="" class="form__elem">
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Имя</div>
                 <input type="text" class = "form__input">
               </label>
-            </form>
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+              </div>
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Телефон</div>
                 <input type="text" class = "form__input">
               </label>
+              </div>
             </form>
-          </form>
-          <form action="" class="form__elem">
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+            <form action="" class="form__elem">
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Улица</div>
                 <input type="text" class = "form__input">
               </label>
+              </div>
             </form>
-          </form>
-          <form action="" class="form__elem">
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+            <form action="" class="form__elem">
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Дом</div>
                 <input type="text" class = "form__input">
               </label>
-            </form>
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+              </div>
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Корпус</div>
                 <input type="text" class = "form__input">
               </label>
-            </form>
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+              </div>
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Квартира</div>
                 <input type="text" class = "form__input">
               </label>
-            </form>
-            <form action="" class="row">
-              <label class="form__row">
-                <div class="form__row-title"></div>
+              </div>
+              <div action="" class="row">
+                <label class="form__row">
+                <div class="form__row-title">Этаж</div>
                 <input type="text" class = "form__input">
               </label>
+              </div>
             </form>
-          </form>
+          </div>
+          <div class="comment__form">
+            <div action="" class="row">
+              <label for="" class="comment__row">
+              <div class="comment__title">Комментарий</div>
+              <textarea type="text"  class ="form__input comment__input"></textarea>
+            </label>
+            </div>
+            <div class="delivery__buttons">
+              <div class="row">
+                <label class="form__radio">
+                  <input type="radio" name="payment" class="radio__elem">
+                  <div class="radio__elem-fake"></div>
+                  <div class="radio__title">Потребуется сдача</div>
+                </label>
+                <label class="form__radio">
+                  <input type="radio" name="payment" class="radio__elem">
+                  <div class="radio__elem-fake"></div>
+                  <div class="radio__title">Безналичный расчет</div>
+                </label>
+              </div>
+              <div class="row">
+                <label class="form__checkbox">
+                  <input type="checkbox" name="call" class="checkbox__elem">
+                  <div class="checkbox__elem-fake"></div>
+                  <div class="checkbox__title">Не перезванивать</div>
+                </label>
+              </div>
+              <div class="row">
+                <a href="">
+                  <div class="button delivery__button">Заказать</div>
+                </a>
+                <input class="reset__button" type="reset" name="delete" class="delete" value="Очистить">
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </section>
     <section class="section map">
       <div class="footer">
@@ -294,40 +340,56 @@
           <div class="contacts__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
           <div class="contacts__phone">
             <div class="phone__img"></div>
-            <div class="phone">+7 (812) 377-13-77</div>
+            <div class="phone"><a href="tel:+7(812)3771377" class="phone__num"><img class="phone__svg" src="images/icons/phone.svg" alt="">+7 (812) 377-13-77</a></div>
           </div>
         </div>
         <div class="footer__socials">
           <ul class="socials">
             <li class="social__item">
-              <a href=""><img src="images/icons/vk.svg" alt="" class="social__vk"></a>
+              <a href="">
+                <svg class="social">
+                    <use xlink:href="images/icons/sprite.svg#vk"/>
+                  </svg>
+                </a>
             </li>
             <li class="social__item">
-              <a href=""><img src="images/icons/fb.svg" alt="" class="social__fb"></a>
+              <a href="">
+                <svg class="social">
+                    <use xlink:href="images/icons/sprite.svg#fb"/>
+                  </svg>
+                </a>
             </li>
             <li class="social__item">
-              <a href=""><img src="images/icons/inst.svg" alt="" class="social__inst"></a>
+              <a href="">
+                <svg class="social">
+                    <use xlink:href="images/icons/sprite.svg#inst"/>
+                  </svg>
+                </a>
             </li>
             <li class="social__item">
-              <a href=""><img src="images/icons/twitter.svg" alt="" class="social__tw"></a>
+              <a href="">
+                <svg class="social">
+                    <use xlink:href="images/icons/sprite.svg#tw"/>
+                  </svg>
+                </a>
             </li>
           </ul>
         </div>
       </div>
     </section>
-  </div>
-  <ul class="fixed-menu"></ul>
+    </div>
+    <ul class="fixed-menu"></ul>
   </div>
   <ul class="dot__list">
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-      <li class="dot__item"><a href="" class="dot__elem"></a></li>
-    </ul>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+    <li class="dot__item"><a href="" class="dot__elem"></a></li>
+  </ul>
 </body>
 
 </html>

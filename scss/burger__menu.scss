@@ -1,5 +1,5 @@
 .burger__menu {
-  background: url("../images/burger_menu-bg.jpg") no-repeat;
+  background: url("../images/burger_menu-bg.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -11,19 +11,47 @@
   position: absolute;
   font-size: px_to_rem(72px);
   font-family: $first-font;
-  top: px_to_rem(110px);
-  left: px_to_rem(100px);
+  top: 11%;
+  left: 11%;
+
+  @include phones {
+    font-size: px_to_rem(35px);
+  };
 }
 
 .menu__types {
   position: absolute;
-  transform: rotate(270deg);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.menu__type {
+  display: flex;
+  float:left;
+  height: 100%;
+}
+
+.menu__item {
+  width: px_to_rem(80px);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
 }
 
 .menu__name {
-  opacity: 0.9;
-  background-color: #2e3133;
-  height:inherit;
   font-size: px_to_rem(40px);
   font-family: $first-font;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  transform: rotate(270deg);
+}
+
+.menu__descr {
+  width: 0;
 }
