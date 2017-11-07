@@ -14,6 +14,11 @@
   width: 25%;
   height: 50%;
 
+  @include tablets {
+    width: 50%;
+    height: 25%;
+  };
+
   &:hover {
 
     .review__text {
@@ -41,6 +46,10 @@
 .rev__name {
   overflow: hidden;
   margin-bottom: px_to_rem(30px);
+
+  @include phones {
+    margin-bottom: px_to_rem(15px);
+  };
 }
 
 .review__photo {
@@ -63,6 +72,11 @@
   padding: px_to_rem(50px) px_to_rem(20px) 0;
   opacity: 0;
   margin-bottom: px_to_rem(30px);
+
+  @include phones {
+    padding-top: px_to_rem(20px);
+    overflow: scroll;
+  };
 }
 
 .more__button {
