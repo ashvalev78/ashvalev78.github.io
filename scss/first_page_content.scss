@@ -1,5 +1,5 @@
 .content__main {
-  background: url("../Images/background.jpg") no-repeat;
+  background: url("../images/background.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -138,30 +138,35 @@
     flex: 1;
 
     .text-up {
-      display: flex;
+      width: 100%;
       font-family: $first-font;
       font-size: px_to_rem(72px);
       color: $burger-descr1;
 
-      @include phones {
-        align-self: center;
+      @include tablets {
         font-size: px_to_rem(55px);
         text-align: center;
-        margin-bottom: px_to_rem(25px);
+        margin-bottom: px_to_rem(20px);
       };
     }
 
     .text-down {
-      display: flex;
       font-family: $second-font;
       font-size: px_to_rem(65px);
 
+      @include tablets {
+        text-align: center;
+      }
+
       @include phones {
         font-size: px_to_rem(40px);
-        text-align: center;
       };
     }
   }
+
+    @include tablets {
+      align-items: center;
+    }
   margin-bottom: px_to_rem(100px);
 }
 

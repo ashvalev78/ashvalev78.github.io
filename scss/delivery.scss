@@ -14,6 +14,10 @@
   font-size: px_to_rem(72px);
   font-family: $first-font;
   margin-bottom: px_to_rem(80px);
+
+  @include phones {
+    margin-bottom: px_to_rem(40px);
+  };
 }
 
 .delivery__block {
@@ -21,6 +25,7 @@
   flex-direction: row;
 
   @include tablets {
+    width: 80%;
     flex-direction: column;
   };
 }
@@ -31,8 +36,12 @@
   width: px_to_rem(460px);
   margin-right: px_to_rem(10px);
 
-  @include phones {
+  @include tablets {
     width: 100%;
+    margin-right: 0;
+  };
+
+  @include phones {
     flex-flow: column nowrap;
   };
 }
@@ -73,14 +82,14 @@
 }
 
 .comment__form {
-  width: px_to_rem(460px);
+  // width: px_to_rem(460px);
   margin-left: px_to_rem(10px);
 
   @include phones {
-    width: 100%;
   };
 
   @include tablets {
+    width: 100%;
     margin-left: 0;
   };
 }
