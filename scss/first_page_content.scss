@@ -4,6 +4,12 @@
   background-position: center center;
 }
 
+// To make menu for mobile devices
+.main__menu {
+  background: #2f3234;
+  background-size: cover;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -20,6 +26,14 @@
   }
 }
 
+.nav__toggle {
+  height: 100%;
+}
+
+.header__toggle {
+  height: inherit;
+}
+
 .header__logo {
   display: flex;
   align-self: flex-start;
@@ -30,6 +44,10 @@
   width: px_to_rem(510px);
   justify-content: space-around;
   align-items: baseline;
+
+  @include tablets {
+    display: none;
+  }
 
   .menu__button {
     text-transform: uppercase;
@@ -74,6 +92,8 @@
 .nav {
   @include tablets {
     display: none;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -88,6 +108,10 @@
   @include tablets {
     display: flex;
   }
+}
+
+.button--active {
+
 }
 
 .mini__menu-item {
@@ -114,6 +138,42 @@
     height: 5px;
     border-radius: 3px;
     bottom: 0;
+  }
+}
+
+.phones__menu {
+  display: flex;
+  align-self: center;
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+
+    .menu__list__item {
+      font-size: px_to_rem(24px);
+      text-align: center;
+      position:relative;
+      margin-bottom: px_to_rem(50px);
+      .item-ref {
+        text-transform: uppercase;
+      }
+
+      &:after {
+        content: "";
+        display: flex;
+        position: absolute;
+        right: 50%;
+        bottom: px_to_rem(-25px);
+        width: px_to_rem(5px);
+        height: px_to_rem(5px);
+        border-radius: px_to_rem(2.5px);
+        background-color: white;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
   }
 }
 
@@ -163,6 +223,11 @@
     }
   }
   margin-bottom: px_to_rem(100px);
+}
+
+// For function that hides any content
+.hide__content {
+  display: none;
 }
 
 .burger {
