@@ -1,28 +1,48 @@
 .team__section {
-  background: url(../images/team-bg.jpg) no-repeat;
+  background: url(../images/team-bg.jpg) center center no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
 }
 
 .team__descr {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: px_to_rem(90px);
   padding-right: px_to_rem(110px);
   width: 49%;
+  @include tablets {
+    padding-right: 0;
+    padding-top: px_to_rem(40px);
+    width: 100%;
+    left: 0;
+    align-items: center;
+  }
   height: 100%;
   opacity: 0.9;
   background-color: #2e3133;
+  left: 51%;
 }
 
 .team__accordeon {
   margin-left: px_to_rem(80px);
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    margin: 0;
+    align-items: center;
+  };
 }
 
 .accordeon__item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: px_to_rem(40px);
+
+  @include tablets {
+    align-items: center;
+  };
 }
 
 .team__head {
@@ -31,28 +51,61 @@
   color: $burger-descr1;
   text-transform: uppercase;
   margin-bottom: px_to_rem(90px);
+
+  @include phones {
+    margin-bottom: px_to_rem(40px);
+  };
 }
 
 .item__head {
-  width: auto;
+  width: 100%;
   margin-bottom: px_to_rem(20px);
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  };
 }
 
 .item__name {
+  display: flex;
   font-family: $first-font;
   font-size: px_to_rem(14px);
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: px_to_rem(9px) solid transparent;
+    border-top-color: $burger-descr1;
+    border-bottom-width: 0;
+    margin-right: px_to_rem(9px);
+  }
+
+  @include tablets {
+    font-size: px_to_rem(25px);
+  }
 }
 
 .item__bottom {
   display: flex;
   height: 0;
   overflow: hidden;
+
+  @include tablets {
+   flex-direction: column;
+   align-items: center;
+ };
 }
 
 @each $active in (1, 2, 3, 4) {
   .is__active#{$active}:active {
     .item__name {
       color: $burger-descr1;
+
+      &:before {
+        transform: rotate(180deg);
+      }
     }
     .item__bottom {
       height: auto;
@@ -68,11 +121,36 @@
 
 .item__descr {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   font-size: px_to_rem(14px);
   margin-left: px_to_rem(25px);
+  width: 100%;
+
+  @include tablets {
+    justify-content: center;
+    margin-left: 0;
+    font-size: px_to_rem(20px);
+
+  };
+
+  @include phones {
+    font-size: px_to_rem(14px);
+  };
+
   .item__occupation {
     font-weight: bold;
     margin-bottom: px_to_rem(20px);
+
+    @include tablets {
+      text-align: center;
+      margin-bottom: px_to_rem(5px);
+    };
+  }
+
+  .item__descr-d {
+    width: inherit;
+    @include tablets {
+      text-align: center;
+    };
   }
 }

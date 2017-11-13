@@ -1,11 +1,17 @@
 .content__main {
-  background: url(../Images/background.jpg) no-repeat;
+  background: url("../Images/background.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
+// To make menu for mobile devices
+.main__menu {
+  background: #2f3234;
+  background-size: cover;
+}
+
 .header {
-  width:100%;
+  width: 100%;
   display: flex;
   margin-top: px_to_rem(5px);
   justify-content: space-between;
@@ -13,11 +19,19 @@
   margin-bottom: px_to_rem(60px);
 
   .header__menu {
+    width: 100%;
     display: flex;
-    width: px_to_rem(620px);
     justify-content: flex-end;
     align-items: baseline;
   }
+}
+
+.nav__toggle {
+  height: 100%;
+}
+
+.header__toggle {
+  height: inherit;
 }
 
 .header__logo {
@@ -27,9 +41,13 @@
 
 .menu__buttons {
   display: inline-flex;
-  width: px_to_rem(620px);
+  width: px_to_rem(510px);
   justify-content: space-around;
   align-items: baseline;
+
+  @include tablets {
+    display: none;
+  }
 
   .menu__button {
     text-transform: uppercase;
@@ -37,14 +55,14 @@
     align-items: baseline;
 
     &:after {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: px_to_rem(15px);
-    width: px_to_rem(5px);
-    height: px_to_rem(5px);
-    border-radius: px_to_rem(2.5px);
-    background-color: #fff;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: px_to_rem(15px);
+      width: px_to_rem(5px);
+      height: px_to_rem(5px);
+      border-radius: px_to_rem(2.5px);
+      background-color: white;
     }
 
     &:last-child:after {
@@ -59,6 +77,7 @@
   text-transform: uppercase;
   width: px_to_rem(97px);
   height: px_to_rem(35px);
+  padding: px_to_rem(3px) px_to_rem(16px);
   border-radius: px_to_rem(6px) px_to_rem(6px) px_to_rem(6px) px_to_rem(6px);
   background: #e45028;
   justify-content: center;
@@ -70,12 +89,120 @@
   }
 }
 
+.nav {
+  @include tablets {
+    display: none;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mini__menu {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  margin-left: 30px;
+  position: relative;
+  display: none;
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.mini__menu-x {
+  display: none;
+  font-size: px_to_rem(60px);
+  color: #c1c2c2;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.button--active {
+  .mini__menu-x {
+    display: flex;
+  }
+
+  .mini__menu {
+    display: none;
+  }
+}
+
+.mini__menu-item {
+  background: white;
+  width: 24px;
+  height: 5px;
+  border-radius: 3px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 24px;
+    height: 5px;
+    border-radius: 3px;
+    top: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 24px;
+    height: 5px;
+    border-radius: 3px;
+    bottom: 0;
+  }
+}
+
+.phones__menu {
+  display: flex;
+  align-self: center;
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+
+    .menu__list__item {
+      font-size: px_to_rem(24px);
+      text-align: center;
+      position:relative;
+      margin-bottom: px_to_rem(50px);
+      .item-ref {
+        text-transform: uppercase;
+      }
+
+      &:after {
+        content: "";
+        display: flex;
+        position: absolute;
+        right: 50%;
+        bottom: px_to_rem(-25px);
+        width: px_to_rem(5px);
+        height: px_to_rem(5px);
+        border-radius: px_to_rem(2.5px);
+        background-color: white;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}
+
 .content {
   display: flex;
   flex: 1;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
 
   .content__left {
     flex: 1;
@@ -85,19 +212,48 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+
     .text-up {
       display: flex;
       font-family: $first-font;
       font-size: px_to_rem(72px);
       color: $burger-descr1;
+
+      @include phones {
+        align-self: center;
+        font-size: px_to_rem(55px);
+        text-align: center;
+        margin-bottom: px_to_rem(25px);
+      };
     }
+
     .text-down {
       display: flex;
       font-family: $second-font;
       font-size: px_to_rem(65px);
+
+      @include phones {
+        font-size: px_to_rem(40px);
+        text-align: center;
+      };
     }
   }
   margin-bottom: px_to_rem(100px);
+}
+
+// For function that hides any content
+.hide__content {
+  display: none;
+}
+
+.burger {
+  width: 100%;
+}
+
+.burger-drops {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .bottom__arrow {
