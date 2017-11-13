@@ -47,6 +47,10 @@ body {
   font-size: px_to_rem(14px);
 }
 
+.body--overflow {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;

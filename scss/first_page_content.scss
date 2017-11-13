@@ -110,8 +110,24 @@
   }
 }
 
-.button--active {
+.mini__menu-x {
+  display: none;
+  font-size: px_to_rem(60px);
+  color: #c1c2c2;
 
+  &:hover {
+    color: white;
+  }
+}
+
+.button--active {
+  .mini__menu-x {
+    display: flex;
+  }
+
+  .mini__menu {
+    display: none;
+  }
 }
 
 .mini__menu-item {
