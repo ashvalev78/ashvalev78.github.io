@@ -1,0 +1,75 @@
+.map {
+  background: url("../images/map-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f0f0f;
+  height: px_to_rem(60px);
+  align-self: flex-end;
+  padding: 0 px_to_rem(80px);
+
+  @include phones {
+    height: px_to_rem(120px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  };
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    height: 50%;
+    justify-content: space-between;
+    text-align: center;
+  };
+}
+
+.footer__socials {
+  display: flex;
+  width: px_to_rem(140px);
+}
+
+.socials {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.social {
+  height: px_to_rem(20px);
+  width: px_to_rem(20px);
+  fill: #5b5b5b;
+
+  &:hover {
+    fill: white;
+  }
+}
+
+.phone__svg {
+  margin-right: px_to_rem(8px);
+}
+
+.phone__num {
+  color: #e45028;
+}
+
+// @each $social in (vk, fb, inst, tw) {
+//   .social__#{$social} {
+//     height: px_to_rem(20px);
+//     width: px_to_rem(20px);
+//     fill: #5b5b5b;
+//
+//     &:hover {
+//       fill: #ffff;
+//     }
+//   }
+// }

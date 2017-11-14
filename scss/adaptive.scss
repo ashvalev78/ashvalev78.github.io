@@ -1,0 +1,22 @@
+@mixin small-cont {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@function px_to_rem($px) {
+  $rem: $px/16px;
+  @return #{$rem}rem;
+}
