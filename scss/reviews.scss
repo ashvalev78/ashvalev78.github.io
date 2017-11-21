@@ -96,3 +96,12 @@
     background: #1f2122;
   }
 }
+
+.modal__window {
+  position: fixed;
+  width: px_to_rem(400px);
+  height: px_to_rem(260px);
+  border-radius: px_to_rem(6px) px_to_rem(6px) px_to_rem(6px) px_to_rem(6px);
+  background: white;
+  color: black;
+}

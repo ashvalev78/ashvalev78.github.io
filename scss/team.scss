@@ -8,12 +8,13 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: px_to_rem(90px);
   padding-right: px_to_rem(110px);
+  padding-left: px_to_rem(80px);
   width: 49%;
   @include tablets {
     padding-right: 0;
+    padding-left: 0;
     padding-top: px_to_rem(40px);
     width: 100%;
     left: 0;
@@ -26,7 +27,6 @@
 }
 
 .team__accordeon {
-  margin-left: px_to_rem(80px);
   display: flex;
   flex-direction: column;
   @include tablets {
@@ -89,8 +89,6 @@
 
 .item__bottom {
   display: flex;
-  height: 0;
-  overflow: hidden;
 
   @include tablets {
    flex-direction: column;
@@ -98,17 +96,12 @@
  };
 }
 
-@each $active in (1, 2, 3, 4) {
-  .is__active#{$active}:active {
-    .item__name {
-      color: $burger-descr1;
+.rotate__triangle {
+  .item__name {
+    color: $burger-descr1;
 
-      &:before {
-        transform: rotate(180deg);
-      }
-    }
-    .item__bottom {
-      height: auto;
+    &:before {
+      transform: rotate(180deg);
     }
   }
 }

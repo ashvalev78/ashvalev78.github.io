@@ -53,5 +53,17 @@
 }
 
 .menu__descr {
-  width: 0;
+  opacity: 0.9;
+  background-color: #2e3133;
+  width: 0px;
+}
+
+.active__menu-trigger {
+  width: px_to_rem(540px);
+  transition-property: width;
+  transition-duration: 0.8s;
+
+  @include tablets {
+    width: 100%;
+  };
 }
