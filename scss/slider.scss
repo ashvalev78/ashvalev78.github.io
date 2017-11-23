@@ -29,20 +29,29 @@
   overflow: visible;
 }
 
+// .left__arrow {
+//   margin-left: 10px;
+// }
+
 .left__arrow-img {
-  margin-left: 10px;
+  // margin-left: 10px;
   transform: rotate(90deg);
 }
 
+// .right__arrow {
+//   margin-right: 10px;
+//
+// }
+
 .right__arrow-img {
-  margin-top: 20px;
+  // margin-top: 20px;
   transform: rotate(-90deg);
 }
 
-.slider__item {
-  display: flex;
-  justify-content: center;
-}
+// .slider__item {
+//   display: flex;
+//   justify-content: center;
+// }
 
 .slider__content {
   display: flex;
@@ -201,6 +210,11 @@
   position: relative;
 }
 
+.slider__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .kkal__weight {
   position: absolute;
   top: 40%;
@@ -208,6 +222,11 @@
   font-family: $first-font;
   font-size: px_to_rem(20px);
   color: #fad39d;
+
+  @include phones {
+    top: 50%;
+    left: 27%;
+  };
 }
 
 .kkal-text {
@@ -215,16 +234,17 @@
 }
 
 .burger__kkal {
-  position:absolute;
-  top: 100%;
+  align-self: flex-start;
 
   @include tablets {
+    position:absolute;
     top: 0;
     left: 80%;
   };
 
   @include phones {
-    left: 85%;
+    position:absolute;
+    right: 0;
   };
 }
 

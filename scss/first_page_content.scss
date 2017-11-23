@@ -219,6 +219,11 @@
       font-size: px_to_rem(72px);
       color: $burger-descr1;
 
+      @include tablets {
+        text-align: center;
+        align-self: center;
+      };
+
       @include phones {
         align-self: center;
         font-size: px_to_rem(55px);

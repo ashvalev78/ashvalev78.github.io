@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel=" stylesheet " href="js/OwlCarousel/assets/owl.carousel.min.css ">
   <link rel="stylesheet " href="js/OwlCarousel/assets/owl.theme.default.min.css ">
-  <link rel="stylesheet " href="js/OnePageScroll/jquery.fullPage.css ">
+  <script type="text/javascript " src="js/jquery-3.2.1.min.js "></script>
+  <script type="text/javascript " src="js/OnePageScroll/jquery.onepage-scroll.min.js"></script>
+  <link rel="stylesheet " href="js/OnePageScroll/onepage-scroll.css ">
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
   <link rel="stylesheet " href="css/main.css ">
-  <script type="text/javascript " src="js/jquery-3.2.1.min.js ">
-  </script>
-  <script text="text/javascript" src="js/OnePageScroll/jquery.fullPage.js"></script>
 </head>
 
 <body>
@@ -27,12 +27,12 @@
           <div class="header__menu ">
             <div class="nav ">
               <ul class="menu__buttons ">
-                <li class="menu__button "><a href=" " class="menu__item-nav ">о нас</a></li>
-                <li class="menu__button "><a href=" " class="menu__item-nav ">бургеры</a></li>
-                <li class="menu__button "><a href=" " class="menu__item-nav ">команда</a></li>
-                <li class="menu__button "><a href=" " class="menu__item-nav ">меню</a></li>
-                <li class="menu__button "><a href=" " class="menu__item-nav ">отзывы</a></li>
-                <li class="menu__button "><a href=" " class="menu__item-nav ">контакты</a></li>
+                <li class="menu__button "><a href="javascript:; " class="menu__item-nav " data-scroll-to='2'>о нас</a></li>
+                <li class="menu__button "><a href="javascript:; " class="menu__item-nav " data-scroll-to='3'>бургеры</a></li>
+                <li class="menu__button "><a href="javascript:; " class="menu__item-nav " data-scroll-to='4'>команда</a></li>
+                <li class="menu__button "><a href="javascript:; " class="menu__item-nav " data-scroll-to='5'>меню</a></li>
+                <li class="menu__button "><a href="javascript:; " class="menu__item-nav " data-scroll-to='6'>отзывы</a></li>
+                <li class="menu__button "><a href="javascript:; " class="menu__item-nav " data-scroll-to='8'>контакты</a></li>
               </ul>
             </div>
             <div class="button "><a href=" " class="text ">заказать</a></div>
@@ -46,12 +46,12 @@
         </div>
         <div class="phones__menu hide__content ">
           <ul class="menu__list ">
-            <li class="menu__list__item "><a href=" " class="item-ref ">почему мы</a></li>
-            <li class="menu__list__item "><a href=" " class="item-ref ">меню</a></li>
-            <li class="menu__list__item "><a href=" " class="item-ref ">советы</a></li>
-            <li class="menu__list__item "><a href=" " class="item-ref ">кто мы</a></li>
-            <li class="menu__list__item "><a href=" " class="item-ref ">свяжитесь с нами</a></li>
-            <li class="menu__list__item "><a href=" " class="item-ref ">контакты</a></li>
+            <li class="menu__list__item "><a href="javascript:; " class="item-ref " data-scroll-to='2'>почему мы</a></li>
+            <li class="menu__list__item "><a href="javascript:; " class="item-ref " data-scroll-to='5'>меню</a></li>
+            <li class="menu__list__item "><a href="javascript:; " class="item-ref " data-scroll-to='6'>советы</a></li>
+            <li class="menu__list__item "><a href="javascript:; " class="item-ref " data-scroll-to='4'>кто мы</a></li>
+            <li class="menu__list__item "><a href="javascript:; " class="item-ref " data-scroll-to='7'>свяжитесь с нами</a></li>
+            <li class="menu__list__item "><a href="javascript:; " class="item-ref " data-scroll-to='8'>контакты</a></li>
           </ul>
         </div>
         <div class="content ">
@@ -65,9 +65,9 @@
             <div class="text-down ">натуральные бургеры</div>
           </div>
         </div>
-        <div class="bottom__arrow ">
+        <a href="javascript:;" class="bottom__arrow " data-scroll-to='2'>
           <img src="images/icons/arrow-scroll.svg " alt=" " class="arrow ">
-        </div>
+        </a>
       </div>
     </section>
     <section class="section values ">
@@ -149,12 +149,6 @@
                 </ul>
                 <div class="composition-x ">&times;</div>
               </div>
-              <div class="burger__kkal ">
-                <div class="kkal-img ">
-                  <div class="kkal__weight ">1200</div>
-                </div>
-                <div class="kkal-text ">Ккал</div>
-              </div>
               <div class="burger__img ">
                 <img src="images/Бургер+с+чернилами+каракатицы.png " alt=" " class="burger__image ">
               </div>
@@ -173,6 +167,12 @@
                   </a>
                 </div>
               </div>
+            </div>
+            <div class="burger__kkal ">
+              <div class="kkal-img ">
+                <div class="kkal__weight ">1200</div>
+              </div>
+              <div class="kkal-text ">Ккал</div>
             </div>
           </div>
           <div class="slider__item ">
@@ -215,12 +215,6 @@
                   </li>
                 </ul>
                 <div class="composition-x ">&times;</div>
-              </div>
-              <div class="burger__kkal ">
-                <div class="kkal-img ">
-                  <div class="kkal__weight ">1200</div>
-                </div>
-                <div class="kkal-text ">Ккал</div>
               </div>
               <div class="burger__img ">
                 <img src="images/Бургер+с+чернилами+каракатицы.png " alt=" " class="burger__image ">
@@ -241,6 +235,12 @@
                 </div>
               </div>
             </div>
+            <div class="burger__kkal ">
+              <div class="kkal-img ">
+                <div class="kkal__weight ">1200</div>
+              </div>
+              <div class="kkal-text ">Ккал</div>
+            </div>
           </div>
           <div class="slider__item ">
             <div class="slider__content ">
@@ -283,12 +283,6 @@
                 </ul>
                 <div class="composition-x ">&times;</div>
               </div>
-              <div class="burger__kkal ">
-                <div class="kkal-img ">
-                  <div class="kkal__weight ">1200</div>
-                </div>
-                <div class="kkal-text ">Ккал</div>
-              </div>
               <div class="burger__img ">
                 <img src="images/Бургер+с+чернилами+каракатицы.png " alt=" " class="burger__image ">
               </div>
@@ -307,6 +301,12 @@
                   </a>
                 </div>
               </div>
+            </div>
+            <div class="burger__kkal ">
+              <div class="kkal-img ">
+                <div class="kkal__weight ">1200</div>
+              </div>
+              <div class="kkal-text ">Ккал</div>
             </div>
           </div>
         </div>
@@ -406,7 +406,7 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:; " class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
@@ -417,7 +417,7 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:; " class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
@@ -428,7 +428,7 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:; " class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
@@ -450,7 +450,7 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:;" class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
@@ -461,7 +461,7 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:; " class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
@@ -472,7 +472,7 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:; " class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
@@ -483,14 +483,13 @@
                 <div class="rev__name ">КОНСТАНТИН СПИЛБЕРГ</div>
                 <div class="rev__review ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
               </div>
-              <a href=" " class="more__button__link ">
+              <a href="javascript:;" class="more__button__link ">
                 <div class="more__button ">Подробнее</div>
               </a>
             </div>
           </li>
         </ul>
       </div>
-      <div class="modal__window "></div>
     </section>
     <section class="section delivery ">
       <div class="container order__form ">
@@ -627,22 +626,19 @@
       </div>
     </section>
     </div>
-  </div>
-  <ul class="dot__list ">
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-    <li class="dot__item "><a href=" " class="dot__elem "></a></li>
-  </ul>
-  <script type="text/javascript " src="js/OwlCarousel/owl.carousel.min.js "></script>
-  <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css " />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js "></script>
-  <script type="text/javascript " src="js/js_task.js ">
-  </script>
+    <ul class="dot__list ">
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="1"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="2"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="3"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="4"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="5"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="6"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="7"></a></li>
+      <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="8"></a></li>
+    </ul>
+    <script type="text/javascript " src="js/OwlCarousel/owl.carousel.min.js "></script>
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox.min.js"></script>
+    <script type="text/javascript " src="js/js_task.js "></script>
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+    //Меню при нажатии на "гамбургер" в приветственной секции
 
     var menu = (function (option) {
 
@@ -42,6 +43,8 @@ $(document).ready(function () {
 
     menu.init();
 
+    // Анимация для списка ингредиентов гамбургера
+
     var sliderItem = $(".slider__item");
     sliderItem.parent().find(".slider__active").show();
 
@@ -60,6 +63,7 @@ $(document).ready(function () {
         $this.parent().find(".composition__list-block").slideUp(300);
     });
 
+    // Аккордеон для секции "О нас"
 
     $(".accordeon__item .item__bottom").hide();
 
@@ -82,29 +86,26 @@ $(document).ready(function () {
         $(".menu__item").on("click", function (e) {
             e.preventDefault();
             const $this = $(e.currentTarget);
-            $this.parent().siblings().find(".menu__descr").removeClass("active__menu-trigger");
-            $this.parent().find(".menu__descr").toggleClass("active__menu-trigger");
+            if ($this.parent().find(".menu__descr").hasClass("active__menu-trigger")) {
+                $this.parent().find(".menu__descr").removeClass("active__menu-trigger");
+            } else {
+                $this.parent().siblings().find(".menu__descr").removeClass("active__menu-trigger");
+                $this.parent().find(".menu__descr").addClass("active__menu-trigger");
+            }
         })
     });
 
-    $(".modal__window").hide();
-
-    $(function () {
-        $(".more__button__link").on("click", function (e) {
-            e.preventDefault();
-            const $this = $(e.currentTarget);
-            console.log($this);
-
-        })
-    });
+    // Слайдер
 
     var slider = $(".owl-carousel").owlCarousel({
-        loop:true,
+        loop: true,
         margin: 20,
-        nav:true,
-        navText: ["",""],
+        nav: true,
+        navText: ["", ""],
         items: 1
     });
+
+    // Кнопки навигации для слайдера
 
     $(".right__arrow").on("click", function (e) {
         e.preventDefault();
@@ -116,22 +117,41 @@ $(document).ready(function () {
         slider.trigger("prev.owl.carousel");
     });
 
+    // Функция работы с модальным окном в секции отзывов.
+
     $(".more__button__link").on("click", function () {
         $.fancybox.open();
     });
 
-    $(".wrapper").onepage_scroll({
-        // sectionContainer: "section",
-        // easing: "ease",
-        // animationTime: 1000,
-        // pagination: true,
-        // updateURL: false,
-        // // beforeMove: function(index) {},
-        // // afterMove: function(index) {},
-        // loop: false,
-        // keyboard: true,
-        // responsiveFallback: false,
-        // direction: "vertical"
+    // One-page scroll
+
+    if (!$("body").hasClass("body--overflow")) {
+        $(".wrapper").onepage_scroll({
+            animationTime: 750,
+            pagination: false,
+            loop: false
+        });
+    } else {
+        $(".wrapper").onepage_scroll({
+            sectionContainer: "div"
+        });
+    }
+
+    // Ссылки для нормальной прокрутки
+
+    $("[data-scroll-to]").on('click', function (e) {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        $.fn.moveTo($this.attr('data-scroll-to'));
     });
 
+    // $(".wrapper").on("wheel", function() {
+    //         var sectionClassNum = $("body").attr("class");
+    //         var sectionNum = sectionClassNum.slice(sectionClassNum.length - 1);
+    //         var dotElements = $("[data-scroll-to]");
+    //     console.log(dotElements);
+    //         if (dotElements.find(".dot__item").attr("data-scroll-to") === +sectionNum) {
+    //             console.log("OK");
+    //         }
+    // });
 });

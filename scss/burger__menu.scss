@@ -53,9 +53,14 @@
 }
 
 .menu__descr {
+  font-size: px_to_rem(24px);
   opacity: 0.9;
   background-color: #2e3133;
   width: 0px;
+
+  @include phones {
+    font-size: px_to_rem(14px);
+  };
 }
 
 .active__menu-trigger {
