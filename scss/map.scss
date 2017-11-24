@@ -1,7 +1,7 @@
 .map {
-  background: url("../images/map-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
+  // background: url("../images/map-bg.jpg") no-repeat;
+  // background-size: cover;
+  // background-position: center center;
 }
 
 .footer {
@@ -13,6 +13,7 @@
   height: px_to_rem(60px);
   align-self: flex-end;
   padding: 0 px_to_rem(80px);
+  z-index: 100;
 
   @include phones {
     height: px_to_rem(120px);
@@ -62,14 +63,10 @@
   color: #e45028;
 }
 
-// @each $social in (vk, fb, inst, tw) {
-//   .social__#{$social} {
-//     height: px_to_rem(20px);
-//     width: px_to_rem(20px);
-//     fill: #5b5b5b;
-//
-//     &:hover {
-//       fill: #ffff;
-//     }
-//   }
-// }
+.map__included {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

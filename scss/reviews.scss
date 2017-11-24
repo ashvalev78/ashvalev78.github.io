@@ -25,22 +25,22 @@
       opacity: 1;
     }
 
-    .rev__name {
-      align-self: flex-start;
-      text-transform: uppercase;
-      font-size: px_to_rem(14px);
-      font-family: $first-font;
-    }
-
-    .rev__review {
-      font-size: px_to_rem(14px);
-      font-family: $main-font;
-    }
-
     .more__button {
       opacity: 1;
     }
   }
+}
+
+.rev__name {
+  align-self: flex-start;
+  text-transform: uppercase;
+  font-size: px_to_rem(14px);
+  font-family: $first-font;
+}
+
+.rev__review {
+  font-size: px_to_rem(14px);
+  font-family: $main-font;
 }
 
 .rev__name {
@@ -79,6 +79,10 @@
   };
 }
 
+.more__button__link {
+  width: px_to_rem(97px);
+}
+
 .more__button {
   opacity: 0;
   display: flex;
@@ -97,11 +101,14 @@
   }
 }
 
-.modal__window {
-  position: fixed;
+.popup {
   width: px_to_rem(400px);
   height: px_to_rem(260px);
   border-radius: px_to_rem(6px) px_to_rem(6px) px_to_rem(6px) px_to_rem(6px);
-  background: white;
   color: black;
+
+  @include phones {
+    width: px_to_rem(350px);
+    height: px_to_rem(260px);
+  };
 }

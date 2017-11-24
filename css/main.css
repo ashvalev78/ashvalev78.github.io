@@ -621,18 +621,20 @@ body {
       height: 25%; } }
   .review__item:hover .review__text {
     opacity: 1; }
-  .review__item:hover .rev__name {
-    -webkit-align-self: flex-start;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    font-family: "Gagalin-Regular"; }
-  .review__item:hover .rev__review {
-    font-size: 0.875rem;
-    font-family: "Ubuntu-Regular"; }
   .review__item:hover .more__button {
     opacity: 1; }
+
+.rev__name {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-family: "Gagalin-Regular"; }
+
+.rev__review {
+  font-size: 0.875rem;
+  font-family: "Ubuntu-Regular"; }
 
 .rev__name {
   overflow: hidden;
@@ -676,6 +678,9 @@ body {
       padding-top: 1.25rem;
       overflow: scroll; } }
 
+.more__button__link {
+  width: 6.0625rem; }
+
 .more__button {
   opacity: 0;
   display: -webkit-box;
@@ -700,13 +705,15 @@ body {
   .more__button:hover {
     background: #1f2122; }
 
-.modal__window {
-  position: fixed;
+.popup {
   width: 25rem;
   height: 16.25rem;
   border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
-  background: white;
   color: black; }
+  @media screen and (max-width: 480px) {
+    .popup {
+      width: 21.875rem;
+      height: 16.25rem; } }
 
 .team__section {
   background: url(../images/team-bg.jpg) center center no-repeat;
@@ -966,10 +973,11 @@ body {
   transform: rotate(270deg); }
 
 .menu__descr {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   opacity: 0.9;
   background-color: #2e3133;
-  width: 0px; }
+  width: 0px;
+  overflow: hidden; }
   @media screen and (max-width: 480px) {
     .menu__descr {
       font-size: 0.875rem; } }
@@ -1111,7 +1119,11 @@ body {
   margin-right: 1.25rem; }
 
 .radio__elem {
+  display: block;
+  cursor: default;
   clip: rect(0 0 0 0);
+  padding: 0;
+  border-width: 0;
   width: 0;
   height: 0;
   overflow: hidden; }
@@ -1149,6 +1161,7 @@ body {
 
 .checkbox__elem {
   position: absolute;
+  -webkit-appearance: checkbox;
   clip: rect(0 0 0 0);
   width: 0;
   height: 0;
@@ -1185,11 +1198,6 @@ body {
   border: 0;
   color: white; }
 
-.map {
-  background: url("../images/map-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center; }
-
 .footer {
   width: 100%;
   display: -webkit-box;
@@ -1209,7 +1217,8 @@ body {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  padding: 0 5rem; }
+  padding: 0 5rem;
+  z-index: 100; }
   @media screen and (max-width: 480px) {
     .footer {
       height: 7.5rem;
@@ -1275,6 +1284,13 @@ body {
 
 .phone__num {
   color: #e45028; }
+
+.map__included {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 .burger__slider {
   background: #f9b43b;

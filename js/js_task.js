@@ -89,8 +89,8 @@ $(document).ready(function () {
             if ($this.parent().find(".menu__descr").hasClass("active__menu-trigger")) {
                 $this.parent().find(".menu__descr").removeClass("active__menu-trigger");
             } else {
-                $this.parent().siblings().find(".menu__descr").removeClass("active__menu-trigger");
                 $this.parent().find(".menu__descr").addClass("active__menu-trigger");
+                $this.parent().siblings().find(".menu__descr").removeClass("active__menu-trigger");
             }
         })
     });
@@ -117,12 +117,6 @@ $(document).ready(function () {
         slider.trigger("prev.owl.carousel");
     });
 
-    // Функция работы с модальным окном в секции отзывов.
-
-    $(".more__button__link").on("click", function () {
-        $.fancybox.open();
-    });
-
     // One-page scroll
 
     if (!$("body").hasClass("body--overflow")) {
@@ -145,13 +139,45 @@ $(document).ready(function () {
         $.fn.moveTo($this.attr('data-scroll-to'));
     });
 
-    // $(".wrapper").on("wheel", function() {
-    //         var sectionClassNum = $("body").attr("class");
-    //         var sectionNum = sectionClassNum.slice(sectionClassNum.length - 1);
-    //         var dotElements = $("[data-scroll-to]");
-    //     console.log(dotElements);
-    //         if (dotElements.find(".dot__item").attr("data-scroll-to") === +sectionNum) {
-    //             console.log("OK");
-    //         }
+    var sectionSelector = $(function() {
+        $(".wrapper").on("wheel", function () {
+            var sectionClassNum = $("body").attr("class");
+            var sectionNum = sectionClassNum.slice(sectionClassNum.length - 1);
+            var dotElements = $("[data-scroll-to]");
+            console.log(dotElements);
+            if (dotElements.find(".dot__item").attr("data-scroll-to") === +sectionNum) {
+                console.log("OK");
+            }
+        });
+    });
+
+    sectionSelector();
+
+    // Функция работы с модальным окном в секции отзывов.
+
+    $("#modal_window").hide();
+
+    $(".more__button__link").on("click", function (e) {
+        const $this = $(e.currentTarget);
+        var text = $this.parent().find(".review__text").html();
+        $("#modal_window").html(text);
+        $(function (e) {
+
+        });
+    });
+
+
+    var fancyboxModal = function () {
+        $(".more__button__link").fancybox({
+            touch: true,
+            smallButton: false
+        });
+        // $.fancybox.center;
+    //     $(".modal-review__close").on("click", e => {
+    //         e.preventDefault();
+    //     $.fancybox.close();
     // });
+    };
+
+    fancyboxModal();
 });

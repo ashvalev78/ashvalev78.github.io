@@ -53,10 +53,11 @@
 }
 
 .menu__descr {
-  font-size: px_to_rem(24px);
+  font-size: px_to_rem(18px);
   opacity: 0.9;
   background-color: #2e3133;
   width: 0px;
+  overflow: hidden;
 
   @include phones {
     font-size: px_to_rem(14px);
