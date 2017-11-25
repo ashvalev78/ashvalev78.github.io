@@ -57,6 +57,9 @@ body {
   background-size: 100%;
   font-size: 0.875rem; }
 
+input {
+  outline: none; }
+
 .body--overflow {
   overflow: hidden; }
 
@@ -1122,8 +1125,6 @@ body {
   display: block;
   cursor: default;
   clip: rect(0 0 0 0);
-  padding: 0;
-  border-width: 0;
   width: 0;
   height: 0;
   overflow: hidden; }
@@ -1150,6 +1151,9 @@ body {
     border-radius: 50%; }
 
 .radio__elem:checked + .radio__elem-fake:after {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   height: 0.5rem;
   width: 0.5rem; }
 
@@ -1161,7 +1165,6 @@ body {
 
 .checkbox__elem {
   position: absolute;
-  -webkit-appearance: checkbox;
   clip: rect(0 0 0 0);
   width: 0;
   height: 0;
@@ -1188,8 +1191,10 @@ body {
   margin-left: 0.625rem; }
 
 .delivery__button {
+  color: white;
   margin-left: 0;
-  margin-right: 1.25rem; }
+  margin-right: 1.25rem;
+  border-style: hidden; }
 
 .reset__button {
   padding-left: 0;

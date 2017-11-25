@@ -47,6 +47,10 @@ body {
   font-size: px_to_rem(14px);
 }
 
+input {
+  outline: none;
+}
+
 .body--overflow {
   overflow: hidden;
 }

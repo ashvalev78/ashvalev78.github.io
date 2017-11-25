@@ -498,93 +498,91 @@
     <section class="section delivery ">
       <div class="container order__form ">
         <div class="delivery-title ">Закажите доставку</div>
-        <div class="delivery__block ">
+        <form class="delivery__block ">
           <div class="delivery__form ">
-            <form action=" " class="form__elem ">
+            <div action=" " class="form__elem ">
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Имя</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Телефон</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input " required>
               </label>
               </div>
-            </form>
-            <form action=" " class="form__elem ">
+            </div>
+            <div action=" " class="form__elem ">
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Улица</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input " required>
               </label>
               </div>
-            </form>
-            <form action=" " class="form__elem ">
+            </div>
+            <div action=" " class="form__elem ">
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Дом</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Корпус</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Квартира</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Этаж</div>
-                <input type="text " class = "form__input ">
+                <input type="text" class = "form__input ">
               </label>
               </div>
-            </form>
+            </div>
           </div>
           <div class="comment__form ">
             <div action=" " class="row ">
               <label for=" " class="comment__row ">
               <div class="comment__title ">Комментарий</div>
-              <textarea type="text "  class ="form__input comment__input "></textarea>
+              <textarea type="text"  class ="form__input comment__input "></textarea>
             </label>
             </div>
             <div class="delivery__buttons ">
               <div class="row ">
                 <label class="form__radio ">
-                  <input type="radio " name="payment " class="radio__elem ">
+                  <input type="radio" name="payment " class="radio__elem " checked>
                   <div class="radio__elem-fake "></div>
                   <div class="radio__title ">Потребуется сдача</div>
                 </label>
                 <label class="form__radio ">
-                  <input type="radio " name="payment " class="radio__elem ">
+                  <input type="radio" name="payment " class="radio__elem ">
                   <div class="radio__elem-fake "></div>
                   <div class="radio__title ">Безналичный расчет</div>
                 </label>
               </div>
               <div class="row ">
                 <label class="form__checkbox ">
-                  <input type="checkbox " name="call " class="checkbox__elem ">
+                  <input type="checkbox" name="call " class="checkbox__elem ">
                   <div class="checkbox__elem-fake "></div>
                   <div class="checkbox__title ">Не перезванивать</div>
                 </label>
               </div>
               <div class="row ">
-                <a href=" ">
-                  <div class="button delivery__button ">Заказать</div>
-                </a>
-                <input class="reset__button " type="reset " name="delete " class="delete " value="Очистить ">
+                <input type="submit" name="submit" class="button delivery__button " value="Заказать">
+                <input class="reset__button " type="reset" name="delete " class="delete " value="Очистить ">
               </div>
             </div>
           </div>
-        </div>
+        </form>
     </section>
     <section class="section map ">
       <div class="map__included" id="map"></div>

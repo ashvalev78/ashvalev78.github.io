@@ -15,6 +15,7 @@ $(document).ready(function () {
         var arrowButton = document.querySelector('.arrow');
         var miniMenu = document.querySelector('.mini__menu-x');
         var body = document.querySelector('body');
+        var navigationButtons = $(".item-ref");
 
         var toggleMenu = function () {
             button.classList.toggle("button--active");
@@ -229,27 +230,16 @@ $(document).ready(function () {
         $.fn.moveTo($this.attr('data-scroll-to'));
     });
 
-    // var sectionSelector = function() {
-    //     $(".wrapper").on("wheel", function (e) {
-    //         var sectionClassNum = $("body").attr("class");
-    //         var sectionNum = sectionClassNum.slice(sectionClassNum.length - 1);
-    //         var scrollDirection = e.originalEvent.deltaY;
-    //         if (scrollDirection > 0) {
-    //             sectionNum = +sectionNum + 1;
-    //         } else {
-    //             sectionNum = +sectionNum - 1;
-    //         }
-    //         console.log(sectionNum);
-    //         var dotElements = $("[data-scroll-to]");
-    //         console.log(dotElements);
-    //         console.log(dotElements.eq(dotElements.length - 9 + sectionNum).attr("data-scroll-to"));
-    //         if (dotElements.find(".dot__item").attr("data-scroll-to") === +sectionNum) {
-    //             console.log("OK");
-    //         }
-    //     });
-    // };
+    $(function () {
+            var activeSection = $(".wrapper").find(".active");
 
-    // sectionSelector();
+            if (activeSection.hasClass("active")) {
+                console.log(activeSection.attr("data-index"));
+            } else {
+                activeSection = $(".wrapper").find(".active");
+                console.log(activeSection.attr("data-index"));
+            }
+        });
 
     // Функция работы с модальным окном в секции отзывов.
 
@@ -268,10 +258,10 @@ $(document).ready(function () {
             smallButton: false
         });
         // $.fancybox.center;
-    //     $(".modal-review__close").on("click", e => {
-    //         e.preventDefault();
-    //     $.fancybox.close();
-    // });
+        //     $(".modal-review__close").on("click", e => {
+        //         e.preventDefault();
+        //     $.fancybox.close();
+        // });
     };
 
     fancyboxModal();
