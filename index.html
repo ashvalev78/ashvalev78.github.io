@@ -504,7 +504,7 @@
     <section class="section delivery ">
       <div class="container order__form ">
         <div class="delivery-title ">Закажите доставку</div>
-        <form action="server.php" method="post" class="delivery__block ">
+        <form action="php/server-emu.php" method="post" class="delivery__block " id="order-form">
           <div class="delivery__form ">
             <div action=" " class="form__elem ">
               <div action=" " class="row ">
@@ -559,25 +559,25 @@
             <div action=" " class="row ">
               <label for=" " class="comment__row ">
               <div class="comment__title ">Комментарий</div>
-              <textarea name="userComment" type="text"  class ="form__input comment__input "></textarea>
+              <textarea name="message"  class ="form__input comment__input "></textarea>
             </label>
             </div>
             <div class="delivery__buttons ">
               <div class="row ">
                 <label class="form__radio ">
-                  <input name="userCash" type="radio" name="payment " class="radio__elem " checked>
+                  <input type="radio" name="payment" class="radio__elem " checked value="Наличными">
                   <div class="radio__elem-fake "></div>
                   <div class="radio__title ">Потребуется сдача</div>
                 </label>
                 <label class="form__radio ">
-                  <input name="userCard" type="radio" name="payment " class="radio__elem ">
+                  <input type="radio" name="payment" class="radio__elem " value="Картой">
                   <div class="radio__elem-fake "></div>
                   <div class="radio__title ">Безналичный расчет</div>
                 </label>
               </div>
               <div class="row ">
                 <label class="form__checkbox ">
-                  <input name="userCall" type="checkbox" name="call " class="checkbox__elem ">
+                  <input type="checkbox" name="call" class="checkbox__elem " value="1">
                   <div class="checkbox__elem-fake "></div>
                   <div class="checkbox__title ">Не перезванивать</div>
                 </label>
@@ -652,6 +652,7 @@
     <script type="text/javascript " src="js/OwlCarousel/owl.carousel.min.js "></script>
     <script type="text/javascript" src="js/fancybox/jquery.fancybox.min.js"></script>
     <script type="text/javascript " src="js/js_task.js "></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
 </body>
 
 </html>
