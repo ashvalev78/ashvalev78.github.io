@@ -504,19 +504,19 @@
     <section class="section delivery ">
       <div class="container order__form ">
         <div class="delivery-title ">Закажите доставку</div>
-        <form class="delivery__block ">
+        <form action="server.php" method="post" class="delivery__block ">
           <div class="delivery__form ">
             <div action=" " class="form__elem ">
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Имя</div>
-                <input type="text" class = "form__input " required>
+                <input name="userName" type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Телефон</div>
-                <input type="text" class = "form__input " required>
+                <input name="userPhone" type="text" class = "form__input " required>
               </label>
               </div>
             </div>
@@ -524,7 +524,7 @@
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Улица</div>
-                <input type="text" class = "form__input " required>
+                <input name="userStreet" type="text" class = "form__input " required>
               </label>
               </div>
             </div>
@@ -532,25 +532,25 @@
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Дом</div>
-                <input type="text" class = "form__input " required>
+                <input name="userHome" type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Корпус</div>
-                <input type="text" class = "form__input " required>
+                <input name="userBlock" type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Квартира</div>
-                <input type="text" class = "form__input " required>
+                <input name="userFlat" type="text" class = "form__input " required>
               </label>
               </div>
               <div action=" " class="row ">
                 <label class="form__row ">
                 <div class="form__row-title ">Этаж</div>
-                <input type="text" class = "form__input ">
+                <input name="userFlour" type="text" class = "form__input ">
               </label>
               </div>
             </div>
@@ -559,25 +559,25 @@
             <div action=" " class="row ">
               <label for=" " class="comment__row ">
               <div class="comment__title ">Комментарий</div>
-              <textarea type="text"  class ="form__input comment__input "></textarea>
+              <textarea name="userComment" type="text"  class ="form__input comment__input "></textarea>
             </label>
             </div>
             <div class="delivery__buttons ">
               <div class="row ">
                 <label class="form__radio ">
-                  <input type="radio" name="payment " class="radio__elem " checked>
+                  <input name="userCash" type="radio" name="payment " class="radio__elem " checked>
                   <div class="radio__elem-fake "></div>
                   <div class="radio__title ">Потребуется сдача</div>
                 </label>
                 <label class="form__radio ">
-                  <input type="radio" name="payment " class="radio__elem ">
+                  <input name="userCard" type="radio" name="payment " class="radio__elem ">
                   <div class="radio__elem-fake "></div>
                   <div class="radio__title ">Безналичный расчет</div>
                 </label>
               </div>
               <div class="row ">
                 <label class="form__checkbox ">
-                  <input type="checkbox" name="call " class="checkbox__elem ">
+                  <input name="userCall" type="checkbox" name="call " class="checkbox__elem ">
                   <div class="checkbox__elem-fake "></div>
                   <div class="checkbox__title ">Не перезванивать</div>
                 </label>
@@ -635,7 +635,10 @@
       </div>
     </section>
     </div>
-    <div class="popup" id="modal_window"></div>
+    <div class="popup" id="modal_window">
+      <div class="modal-content"></div>
+      <a href="javascript:;" class="modal-x">&times;</a>
+    </div>
     <ul class="dot__list ">
       <li class="dot__item "><a href="javascript:;" class="dot__elem active" data-scroll-to="1"></a></li>
       <li class="dot__item "><a href="javascript:;" class="dot__elem " data-scroll-to="2"></a></li>

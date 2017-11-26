@@ -153,7 +153,7 @@ $(document).ready(function () {
 
     var slider = $(".owl-carousel").owlCarousel({
         loop: true,
-        margin: 20,
+        margin: 40,
         nav: true,
         navText: ["", ""],
         items: 1
@@ -214,20 +214,20 @@ $(document).ready(function () {
     $(".more__button__link").on("click", function (e) {
         const $this = $(e.currentTarget);
         var text = $this.parent().find(".review__text").html();
-        $("#modal_window").html(text);
+        $("#modal_window").find(".modal-content").html(text);
     });
 
 
     var fancyboxModal = function () {
         $(".more__button__link").fancybox({
             touch: true,
-            smallButton: false
+            smallBtn: false,
+            buttons: []
         });
-        // $.fancybox.center;
-        //     $(".modal-review__close").on("click", e => {
-        //         e.preventDefault();
-        //     $.fancybox.close();
-        // });
+            $(".modal-x").on("click", function(e) {
+
+            $.fancybox.close();
+        });
     };
 
     fancyboxModal();

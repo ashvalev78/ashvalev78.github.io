@@ -75,12 +75,15 @@
 
   @include phones {
     padding-top: px_to_rem(20px);
-    overflow: scroll;
+    overflow: hidden;
   };
 }
 
 .more__button__link {
   width: px_to_rem(97px);
+  border-style: hidden;
+  outline: none;
+  margin-left: px_to_rem(13px);
 }
 
 .more__button {
@@ -94,7 +97,6 @@
   background: #2f3234;
   justify-content: center;
   align-items: center;
-  margin-left: px_to_rem(13px);
 
   &:hover {
     background: #1f2122;
@@ -102,6 +104,7 @@
 }
 
 .popup {
+  position: relative;
   width: px_to_rem(400px);
   height: px_to_rem(260px);
   border-radius: px_to_rem(6px) px_to_rem(6px) px_to_rem(6px) px_to_rem(6px);
@@ -111,4 +114,12 @@
     width: px_to_rem(350px);
     height: px_to_rem(260px);
   };
+}
+
+.modal-x {
+  top: 5%;
+  right: 5%;
+  position: absolute;
+  font-size: px_to_rem(30px);
+  color: #ec8468;
 }
