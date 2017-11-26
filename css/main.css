@@ -141,6 +141,11 @@ input {
     height: 0.875rem;
     opacity: 1; }
 
+.active:before {
+  width: 0.875rem;
+  height: 0.875rem;
+  opacity: 1; }
+
 @media screen and (max-width: 1000px) {
   .dot__list {
     display: none; } }

@@ -193,16 +193,19 @@ $(document).ready(function () {
         $.fn.moveTo($this.attr('data-scroll-to'));
     });
 
-    $(function () {
-        var activeSection = $(".wrapper").find(".active");
+    // Раскрытие кружков в меню навигации справа.
 
-        if (activeSection.hasClass("active")) {
-            console.log(activeSection.attr("data-index"));
-        } else {
-            activeSection = $(".wrapper").find(".active");
-            console.log(activeSection.attr("data-index"));
-        }
-    });
+    var dotList = $(".dot__list").find(".dot__item");
+
+    var dotOpenFunction = function () {
+        var sectionClass = $("body").attr("class");
+        var sectionNum = sectionClass.slice(sectionClass.length - 1);
+        var listNum = dotList.eq(sectionNum - 1);
+        listNum.siblings().find(".dot__elem").removeClass("active");
+        listNum.find(".dot__elem").addClass("active");
+    };
+
+    setInterval(dotOpenFunction, 1);
 
 // Функция работы с модальным окном в секции отзывов.
 

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5587bee-a841-496d-a30f-b5967953025a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/js_task.js" afterPath="$PROJECT_DIR$/js/js_task.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/burger__menu.scss" afterPath="$PROJECT_DIR$/scss/burger__menu.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/common.scss" afterPath="$PROJECT_DIR$/scss/common.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +24,8 @@
       <file leaf-file-name="js_task.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/js_task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="110" column="59" lean-forward="false" selection-start-line="110" selection-start-column="59" selection-end-line="110" selection-end-column="59" />
+            <state relative-caret-position="659">
+              <caret line="207" column="34" lean-forward="false" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -33,8 +34,8 @@
       <file leaf-file-name="yaMaps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/yaMaps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="833">
+              <caret line="49" column="72" lean-forward="true" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -143,12 +144,12 @@
       <workItem from="1511269050352" duration="4221000" />
       <workItem from="1511347155397" duration="15362000" />
       <workItem from="1511464459856" duration="326000" />
-      <workItem from="1511469169634" duration="34984000" />
+      <workItem from="1511469169634" duration="41325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93460000" />
+    <option name="totallyTimeSpent" value="99801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -263,14 +264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/yaMaps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/YandexApi/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -279,10 +272,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/yaMaps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="72" lean-forward="true" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/js_task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="110" column="59" lean-forward="false" selection-start-line="110" selection-start-column="59" selection-end-line="110" selection-end-column="59" />
+        <state relative-caret-position="659">
+          <caret line="207" column="34" lean-forward="false" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
           <folding />
         </state>
       </provider>
