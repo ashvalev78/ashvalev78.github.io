@@ -28,6 +28,7 @@ $(document).ready(function () {
             miniMenu.classList.toggle("hide__content");
             body.classList.toggle("body--overflow");
         };
+        navigationButtons.on("click", toggleMenu);
 
         var addListeners = function () {
             button.addEventListener("click", toggleMenu);
@@ -74,119 +75,81 @@ $(document).ready(function () {
         $(".item__head").on("click", function (e) {
 
             const $this = $(e.currentTarget);
-            $this.parent().siblings().removeClass("active");
-            $this.parent().siblings().find(".item__head").removeClass("rotate__triangle");
-            $this.parent().siblings().find(".item__bottom").slideUp();
+            const $thisParent = $this.parent();
+            $thisParent.siblings().removeClass("active");
+            $thisParent.siblings().find(".item__head").removeClass("rotate__triangle");
+            $thisParent.siblings().find(".item__bottom").slideUp();
             $this.toggleClass("rotate__triangle");
-            $this.parent().addClass("active");
-            $this.parent().find(".item__bottom").slideToggle(300);
+            $thisParent.addClass("active");
+            $thisParent.find(".item__bottom").slideToggle(300);
         })
     });
 
     // Функция открытия меню
 
-    var oneIsUp = false;
+    var menuAcco = function () {
+        var calculateWidth = function () {
+            const windowWidth = $(window).width();
+            const links = $(".menu__item");
+            const linksWidth = links.width();
+            const reqWidth = windowWidth - linksWidth * links.length;
 
-    $(function () {
+            return reqWidth > 550 ? 550 : reqWidth;
+        };
+
+        var openItem = function (item) {
+            const container = $(".menu__types");
+            const otherItems = $(".menu__type", container);
+            const content = item.find(".menu__descr");
+            const accoText = $(".descr-text", container);
+            const activeItem = otherItems.filter(".active");
+            const activeName = item.find(".menu__name");
+            const activeContent = activeItem.find(".menu__descr");
+            const openWidth = calculateWidth();
+
+            otherItems.removeClass("active");
+            otherItems.find(".menu__name").removeClass("active-name");
+            item.addClass("active");
+            activeName.addClass("active-name");
+
+
+            accoText.hide();
+            activeContent.animate({width: "0px"});
+
+            content.animate(
+                {
+                    width: openWidth + "px"
+                },
+                function () {
+                    accoText.fadeIn();
+                }
+            );
+        };
+
+        const closeItem = function (item) {
+            item.removeClass("active");
+            item.find(".active-name").removeClass("active-name");
+
+            item.closest(".menu__types").find(".descr-text").stop(true, true).fadeOut(function () {
+                    item.find(".menu__descr").animate({width: "0px"});
+                });
+        };
+
         $(".menu__item").on("click", function (e) {
             e.preventDefault();
-            const $this = $(e.currentTarget);
-            const menu = $this.parent();
-            const description = menu.find(".menu__descr");
-            oneIsUp = true;
-
-            var openItem = function (item) {
-                item.animate({width: "550px"}, 600);
-                item.addClass("active__menu-trigger");
-                menu.siblings().find(".menu__descr").removeClass("active__menu-trigger");
-            };
-
-            var closeItem = function (item) {
-                description.removeClass("active__menu-trigger");
-                description.animate({width: "0px"}, 600);
-            };
-
-            if (description.hasClass("active__menu-trigger") && oneIsUp) {
+            const $this = $(e.target);
+            const item = $this.closest(".menu__type");
+            if (item.hasClass("active")) {
+                closeItem(item);
             } else {
-
-                //$this.parent().siblings().find(".menu__descr").removeClass("active__menu-trigger");
+                openItem(item);
             }
-        })
-    });
+        });
+    };
 
+    menuAcco();
 
-    // let verticalAcco = () => {
-    //     let calculateWidth = () => {
-    //         let windowWidth = $(window).width();
-    //         let links = $(".menu-acco__trigger");
-    //         let linksWidth = links.width();
-    //         // console.log(links);
-    //         let reqWidth = windowWidth - linksWidth * links.length;
-    //
-    //         return reqWidth > 550 ? 550 : reqWidth;
-    //     };
-    //
-    //     let openItem = item => {
-    //         let container = $(".menu-acco");
-    //         let otherItems = $(".menu-acco__item", container);
-    //         let content = item.find(".menu-acco__content");
-    //         let accoText = $(".menu-acco__text", container);
-    //         let activeItem = otherItems.filter(".active");
-    //         let activeContent = activeItem.find(".menu-acco__content");
-    //         let openWidth = calculateWidth();
-    //
-    //         otherItems.removeClass("active");
-    //         item.addClass("active");
-    //
-    //         accoText.hide();
-    //         activeContent.animate({ width: "0px" });
-    //
-    //         content.animate(
-    //             {
-    //                 width: openWidth + "px"
-    //             },
-    //             function() {
-    //                 accoText.fadeIn();
-    //             }
-    //         );
-    //     };
-    //
-    //     const closeItem = item => {
-    //         item.removeClass("active");
-    //
-    //         item
-    //             .closest(".menu-acco")
-    //             .find(".menu-acco__text")
-    //             .stop(true, true)
-    //             .fadeOut(function() {
-    //                 item.find(".menu-acco__content").animate({ width: "0px" });
-    //             });
-    //     };
-    //
-    //     $(".menu-acco__trigger").on("click", e => {
-    //         e.preventDefault();
-    //     // let _this = e.target;
-    //     // let $this = $(e.target);
-    //     // console.log(e);
-    //     // console.log(_this);
-    //     // console.log($this);
-    //     let $this = $(e.target);
-    //     let item = $this.closest(".menu-acco__item");
-    //     item.hasClass("active") ? closeItem(item) : openItem(item);
-    // });
-    //     // обрабокта клик вне аккордеона
-    //     $(document).on("click", e => {
-    //         const $this = $(e.target);
-    //
-    //     if (!$this.closest(".menu-acco").length) {
-    //         closeItem($(".menu-acco__item"));
-    //     }
-    // });
-    // };
-    //
-    // verticalAcco();
-
-    // Слайдер
+// Слайдер
 
     var slider = $(".owl-carousel").owlCarousel({
         loop: true,
@@ -196,7 +159,7 @@ $(document).ready(function () {
         items: 1
     });
 
-    // Кнопки навигации для слайдера
+// Кнопки навигации для слайдера
 
     $(".right__arrow").on("click", function (e) {
         e.preventDefault();
@@ -208,7 +171,7 @@ $(document).ready(function () {
         slider.trigger("prev.owl.carousel");
     });
 
-    // One-page scroll
+// One-page scroll
 
     if (!$("body").hasClass("body--overflow")) {
         $(".wrapper").onepage_scroll({
@@ -222,7 +185,7 @@ $(document).ready(function () {
         });
     }
 
-    // Ссылки для нормальной прокрутки
+// Ссылки для нормальной прокрутки
 
     $("[data-scroll-to]").on('click', function (e) {
         e.preventDefault();
@@ -231,17 +194,17 @@ $(document).ready(function () {
     });
 
     $(function () {
-            var activeSection = $(".wrapper").find(".active");
+        var activeSection = $(".wrapper").find(".active");
 
-            if (activeSection.hasClass("active")) {
-                console.log(activeSection.attr("data-index"));
-            } else {
-                activeSection = $(".wrapper").find(".active");
-                console.log(activeSection.attr("data-index"));
-            }
-        });
+        if (activeSection.hasClass("active")) {
+            console.log(activeSection.attr("data-index"));
+        } else {
+            activeSection = $(".wrapper").find(".active");
+            console.log(activeSection.attr("data-index"));
+        }
+    });
 
-    // Функция работы с модальным окном в секции отзывов.
+// Функция работы с модальным окном в секции отзывов.
 
     $("#modal_window").hide();
 
@@ -265,4 +228,5 @@ $(document).ready(function () {
     };
 
     fancyboxModal();
-});
+})
+;

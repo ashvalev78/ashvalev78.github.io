@@ -985,17 +985,8 @@ input {
     .menu__descr {
       font-size: 0.875rem; } }
 
-.active__menu-trigger {
-  width: 33.75rem;
-  -webkit-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s; }
-  @media screen and (max-width: 768px) {
-    .active__menu-trigger {
-      width: 100%; } }
+.active-name {
+  color: #f9b43b; }
 
 .delivery {
   background: url("../images/delivery-bg.jpg") center center no-repeat;

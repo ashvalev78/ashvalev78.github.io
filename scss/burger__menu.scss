@@ -64,12 +64,6 @@
   };
 }
 
-.active__menu-trigger {
-  width: px_to_rem(540px);
-  transition-property: width;
-  transition-duration: 0.8s;
-
-  @include tablets {
-    width: 100%;
-  };
+.active-name {
+  color: $burger-descr1;
 }

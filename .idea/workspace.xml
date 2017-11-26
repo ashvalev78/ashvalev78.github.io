@@ -6,8 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/js_task.js" afterPath="$PROJECT_DIR$/js/js_task.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/common.scss" afterPath="$PROJECT_DIR$/scss/common.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/delivery.scss" afterPath="$PROJECT_DIR$/scss/delivery.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/burger__menu.scss" afterPath="$PROJECT_DIR$/scss/burger__menu.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="js_task.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/js_task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+            <state relative-caret-position="289">
+              <caret line="110" column="59" lean-forward="false" selection-start-line="110" selection-start-column="59" selection-end-line="110" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -144,12 +143,12 @@
       <workItem from="1511269050352" duration="4221000" />
       <workItem from="1511347155397" duration="15362000" />
       <workItem from="1511464459856" duration="326000" />
-      <workItem from="1511469169634" duration="21142000" />
+      <workItem from="1511469169634" duration="34984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79618000" />
+    <option name="totallyTimeSpent" value="93460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -282,8 +281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/js_task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        <state relative-caret-position="289">
+          <caret line="110" column="59" lean-forward="false" selection-start-line="110" selection-start-column="59" selection-end-line="110" selection-end-column="59" />
           <folding />
         </state>
       </provider>
